@@ -1,0 +1,32 @@
+{
+  "name": "Max Hardware Library",
+  "version": "0.1.0",
+  "author": "Matthew Hamilton",
+  "description": "Library of utility objects for MaxMSP aimed at interacting with electronics hardware like Arduino",
+  "tags": ["serial", "bytes", "arduino", "bluetooth", "ble"],
+  "website": "https://github.com/mhamilt/max-hardware-library",
+  "max_version_min": "8.0",
+  "max_version_max": "none",
+  "os": {
+    "macintosh": {
+      "min_version": "10.13",
+      "platform": ["x64"]
+    },
+    "windows" : {
+     "platform" : [ "ia32", "x64" ],
+     "min_version" : "none"
+ }
+  },
+  "homepatcher": "byte-cast-example.maxpat",
+  "package_extra": {
+    "reverse_domain": "com.mhamilt",
+    "copyright": "GNU General Public License v3.0"
+  },
+  "filelist": {
+    "examples": ["byte-cast.maxpat", "arduino-notify.maxpat", "filter-scan.maxpat", "rssi.maxpat", "simple-max-ble.maxpat", "subscribing.maxpat", "using-umenus.maxpat"],
+    "externals": ["byte-cast.mxo", "byte-cast.mxe", "byte-cast.mxe64", "max-ble.mxo", "max-ble.mxe", "max-ble.mxe64"],
+    "help": ["byte-cast.maxhelp", "max-ble.maxhelp"],
+    "extras": ["ble-notify/ble-notify.ino"],
+    "docs": ["byte-cast.maxref.xml", "max-ble.maxref.xml"]
+  }
+}

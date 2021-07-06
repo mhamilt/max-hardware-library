@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+<c74object name="max-ble">
+  <digest>Bluetooth Low Energy Interface</digest>
+  <description>Max Object to interface with Bluetooth Low Energy devices like Mobile devices, Arduinos and other micro-controllers</description>
+
+  <metadatalist>
+    <metadata name="author">Matthew Hamilton</metadata>
+    <metadata name="tag">ble</metadata>
+    <metadata name="tag">bluetooth</metadata>
+    <metadata name="tag">64-bit</metadata>
+  </metadatalist>
+
+  <inletlist>
+    <inlet id="0" type="list">
+      <digest>Message inlet: valid messages begin with scan, stop, found, clear, connect, report and device</digest>
+      <description>Message inlet: valid messages begin with scan, stop, found, clear, connect, report and device</description>
+    </inlet>
+  </inletlist>
+
+  <outletlist>
+    <outlet id="0" type="list">
+      <digest>List Outlet: The found message will output a list of found device UUIDs and RSSIs in series. A connect message will output Service and Charachteristic UUIDs with raw bytes in series.</digest>
+      <description>List ID: The found message will output a list of found device UUIDs and RSSIs in series. A connect message will output Service and Charachteristic UUIDs with raw bytes in series.</description>
+    </outlet>
+    <outlet id="1" type="list">
+      <digest>Notification outlet: Subscribed charateristics will output a list of Characteristic UUID and raw bytes on value change</digest>
+      <description>Notification outlet: Subscribed charateristics will output a list of Characteristic UUID and raw bytes on value change</description>
+    </outlet>
+  </outletlist>
+
+  <methodlist>
+    <method name="clear"><arglist/>
+      <digest>clear the internal list of found devices.</digest>
+      <description>clear the internal list of found devices.</description>
+    </method>
+    <method name="connect"><arglist/>
+      <digest>connect followed by an int will attempt connect to a found device at the given index. All Services and Characteristics will be sent out the first outlet and will bre printed if reporting is on.</digest>
+      <description>
+        <b>connect int:</b>
+        connect followed by an int will attempt connect to a found device at the given index. All Services and Characteristics will be sent out the first outlet and will bre printed if reporting is on.
+        <br/><br/>
+        <b>connect symbol:</b>
+        connect followed by a symbol will interpret the symbol as uuid and attept to connect to the specified device. If the device has not yet been discovered this will trigger scanning and immediately connect once the device has been found.
+        <br/><br/>
+        <b>connect name symbol:</b>
+        connect followed by name then a symbol will interpret the symbol as device name. This will connect to the first device in found devices matching the name.
+      </description>
+    </method>
+    <method name="device"><arglist/>
+      <digest>A device list message is used to interact with the found devices. The int following device specifies the index in found devices.
+      </digest>
+      <description>
+        <b>device int rssi:</b>
+        The int specifies the device index in found devices. RSSI value will be returned out the first inlet as a list message.
+        <br/><br/>
+        <b>device int subscribe ServiceUUID CharacteristicUUID:</b>
+        Subscribe to the notifying characteristic of a with a Characteristic UUID of a Service UUID for a device at the index int. Updates to characteristic value will be sent out the second outlet in list form CharacteristicUUID then the raw bytes.
+      </description>
+    </method>
+    <method name="filter"><arglist/>
+      <digest>filter out devices during scanning
+      </digest>
+      <description>
+        <b>
+          filter rssi int:
+        </b>
+        ignore devices with an RSSI higher than the int specified
+        <br/><br/>
+        <b>
+          filter iphone int:
+        </b>
+        toggle ignoring apple devices with 1 to ignore and 0 to allow. Useful for thinning out scanning for Arduinos.
+        <br/><br/>
+        <b>
+          filter services UUIDlist:
+        </b>
+        'filter' followed by 'services' followed by a list of symbols will scan only for devices advertising one of the listed service UUIDs. This message will trigger the scanning process if it is not already active.
+      </description>
+    </method>
+    <method name="found"><arglist/>
+      <digest>output, in series, the list of found devices and their RSSIs from outlet 3 and post this to the Max Console if reporting is on.
+      </digest>
+      <description>output, in series, the list of found devices and their RSSIs from outlet 3 and post this to the Max Console if reporting is on.</description>
+    </method>
+    <method name="report"><arglist/>
+      <digest>A report message followed by 0 or 1 will toggle reporting printouts to the Max Console.
+      </digest>
+      <description>A report message followed by 0 or 1 will toggle reporting printouts to the Max Console.</description>
+    </method>
+    <method name="scan"><arglist/>
+      <digest>
+        A scan message will begin scanning for BLE devices. A scan message followed by 0 or 1 will toggle scanning.
+      </digest>
+      <description>
+        <b>
+          scan int:
+        </b>
+        scan followed by 0 or 1 will toggle scanning.
+        <br/><br/>
+        <b>
+          scan symbol:
+        </b>
+        scan followed by a list of symbols will begin scanning for devices with any of the advertised uuids in the list
+      </description>
+    </method>
+    <method name="stop"><arglist/>
+      <digest>A stop message will halt scanning.
+      </digest>
+      <description>A stop message will halt scanning.</description>
+    </method>
+  </methodlist>
+</c74object>

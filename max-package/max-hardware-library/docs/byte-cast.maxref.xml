@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+<c74object name="byte-cast">
+  <digest>For casting a list of byte data</digest>
+  <description>Max Object to cast a list of byte data such as that received from Arduino serial comms or Bluetooth Low Energy devices</description>
+
+  <metadatalist>
+    <metadata name="author">Matthew Hamilton</metadata>
+    <metadata name="tag">serial</metadata>
+    <metadata name="tag">data</metadata>
+    <metadata name="tag">byte</metadata>
+  </metadatalist>
+
+  <objarglist>
+    <objarg name='format' optional='0' type='symbol'>
+      <digest>Output Types</digest>
+      <description>The number of arguments determines the number of outlets. Each outlet decodes a list of bytes as either 16-bit 32-bit signed or unsigned int, 32-bit or 64-bit float or symbol.
+        <br/>
+        Decoding method is identified by symbol arguments (h, i, f, or s) similar to C format strings.
+        <br/>
+        Modifiers can be used to dictate endianess ('&lt;' little, `&gt;` big) and signing ('u' for unsigned). e.g. `uh&gt;` is an unsigned 16-bit int in big-endian order.
+        <br/>
+        <!-- i     32-bit int <br/>
+        u     32-bit uint <br/>
+        h     16-bit int <br/>
+        uh    16-bit uint <br/>
+        f     32-bit float <br/>
+        d     64-bit float (double) <br/>
+        c     8-bit Character <br/>
+        s     string until \0 <br/>
+        xxxs  string where xxx is the number of characters -->
+      </description>
+    </objarg>
+  </objarglist>
+
+  <inletlist>
+    <inlet id="0" type="list">
+      <digest>List</digest>
+      <description>list of bytes to cast</description>
+    </inlet>
+  </inletlist>
+
+  <outletlist>
+    <outlet id="0" type="list">
+      <digest>List Data</digest>
+      <description>Byte data cast to specified format. If multiple bytes worth of data is provided, mutliple values will be output. Incomplete data will be ignored.</description>
+    </outlet>
+  </outletlist>
+
+</c74object>

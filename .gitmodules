@@ -1,0 +1,6 @@
+[submodule "maxmsp-ble"]
+	path = maxmsp-ble
+	url = https://github.com/mhamilt/maxmsp-ble
+[submodule "max-byte-cast"]
+	path = max-byte-cast
+	url = https://github.com/mhamilt/max-byte-cast
