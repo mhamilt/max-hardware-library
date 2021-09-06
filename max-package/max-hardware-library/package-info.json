@@ -9,7 +9,7 @@
   "max_version_max": "none",
   "os": {
     "macintosh": {
-      "min_version": "10.13",
+      "min_version": "10.13.0",
       "platform": ["x64"]
     },
     "windows" : {
@@ -23,7 +23,7 @@
     "copyright": "GNU General Public License v3.0"
   },
   "filelist": {
-    "examples": ["byte-cast.maxpat", "arduino-notify.maxpat", "filter-scan.maxpat", "rssi.maxpat", "simple-max-ble.maxpat", "subscribing.maxpat", "using-umenus.maxpat"],
+    "examples": ["byte-cast-example.maxpat", "arduino-notify.maxpat", "filter-scan.maxpat", "rssi.maxpat", "simple-max-ble.maxpat", "subscribing.maxpat", "using-umenus.maxpat"],
     "externals": ["byte-cast.mxo", "byte-cast.mxe", "byte-cast.mxe64", "max-ble.mxo", "max-ble.mxe", "max-ble.mxe64"],
     "help": ["byte-cast.maxhelp", "max-ble.maxhelp"],
     "extras": ["ble-notify/ble-notify.ino"],
