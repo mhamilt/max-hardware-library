@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="_c74_vig.xsl" type="text/xsl"?>
+<vignette name="Max Hardware Library Package Overview" package="Max Hardware Library">
+  <metadatalist>
+    <metadata name="author">Matthew Hamilton</metadata>
+    <metadata name="tag">mhl</metadata>
+  </metadatalist>
+
+
+  <h1>Max Hardware Library</h1>
+  <p>
+    The Max Hardware Library looks to collect together a series of utility objects at interacting with electronics hardware like Arduino.
+    The package provides objects and examples for communicating via Bluetooth Low Energy and for casting raw byte data to other data types.
+  </p>
+
+
+  <h2>The Objects</h2>
+  <ul>
+    <li><openfilelink filename="max-ble.maxhelp">max-ble</openfilelink> - Interface with Bluetooth Low Energy devices like mobile devices, Arduino and other micro-controllers with BLE capability</li>
+    <li><openfilelink filename="byte-cast.maxhelp">byte-cast</openfilelink> - Cast a list of bytes to other data formats.</li>
+  </ul>
+
+
+  <h2>Example Patches</h2>
+  <cr/>
+  <ul>
+    <li><openfilelink filename="mhl.subscribing.maxpat">mhl.subscribing.maxpat</openfilelink> - Subscribing to a BLE Characteristic with a notifying property</li>
+    <li><openfilelink filename="mhl.filter-scan.maxpat">mhl.filter-scan.maxpat</openfilelink> - Filtering BLE scan results</li>
+    <li><openfilelink filename="mhl.rssi.maxpat">mhl.rssi.maxpat</openfilelink> - Filtering out devices by signal strength.</li>
+    <li><openfilelink filename="mhl.using-umenus.maxpat">mhl.using-umenus.maxpat</openfilelink> - Using a <o>umenu</o> to store discovered BLE devices</li>
+    <li><openfilelink filename="mhl.arduino-notify.maxpat">mhl.arduino-notify.maxpat</openfilelink> - Accompanying patcher for included Arduino sketch demonstrating how to advertise over BLE and read with <o>max-ble</o></li>
+    <li><openfilelink filename="mhl.byte-cast-example.maxpat">mhl.byte-cast-example.maxpat</openfilelink> - Casting bytes to data types</li>
+    <li><openfilelink filename="mhl.formats.maxpat">mhl.formats.maxpat</openfilelink> - Data formats supported by <o>byte-cast</o></li>
+  </ul>
+  <cr/>
+
+
+  <seealsolist>
+    <seealso name="max-ble" />
+    <seealso name="byte-cast" />
+  </seealsolist>
+
+</vignette>

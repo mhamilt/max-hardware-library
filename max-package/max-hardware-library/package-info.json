@@ -9,7 +9,7 @@
   "max_version_max": "none",
   "os": {
     "macintosh": {
-      "min_version": "10.13.0",
+      "min_version": "10.13",
       "platform": ["x64"]
     },
     "windows" : {
