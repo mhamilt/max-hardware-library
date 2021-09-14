@@ -12,6 +12,10 @@
     The Max Hardware Library looks to collect together a series of utility objects at interacting with electronics hardware like Arduino.
     The package provides objects and examples for communicating via Bluetooth Low Energy and for casting raw byte data to other data types.
   </p>
+  <p>
+    Source code for the library is open and avilable at <a href="https://github.com/mhamilt/max-hardware-library">github.com/mhamilt/max-hardware-library</a>.
+    Contact the repository owner for any feature requests.
+  </p>
 
 
   <h2>The Objects</h2>

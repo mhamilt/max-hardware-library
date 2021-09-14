@@ -1,15 +1,15 @@
 {
   "name": "Max Hardware Library",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Matthew Hamilton",
-  "description": "Library of utility objects for MaxMSP aimed at interacting with electronics hardware like Arduino",
+  "description": "Library of utility objects for MaxMSP aimed at interacting with electronics hardware like Arduino via Bluetooth",
   "tags": ["serial", "bytes", "arduino", "bluetooth", "ble"],
   "website": "https://github.com/mhamilt/max-hardware-library",
   "max_version_min": "8.0",
   "max_version_max": "none",
   "os": {
     "macintosh": {
-      "min_version": "10.13",
+      "min_version": "10.13.0",
       "platform": ["x64"]
     },
     "windows" : {
