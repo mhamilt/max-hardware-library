@@ -1,6 +1,14 @@
+<p align="center">
+  <img src="max-package/max-hardware-library/icon.png" />
+</p>
+
+
 # Max Hardware Library
 
+
 Library of utility objects for MaxMSP aimed at interacting with electronics hardware like Arduino
+
+
 
 -   [Install](#install)
 -   [Contents](#contents)
