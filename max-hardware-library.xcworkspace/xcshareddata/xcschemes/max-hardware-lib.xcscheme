@@ -17,8 +17,17 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "import json&#10;"
+               scriptText = "import json&#10;import os&#10;&#10;cwd =  os.path.dirname(os.environ[&apos;WORKSPACE_PATH&apos;])&#10;max_package_dir = cwd + &quot;/max-package/max-hardware-library&quot;&#10;&#10;with open(max_package_dir + &quot;/package-info.json&quot;, &quot;r&quot;) as f:&#10;    package_json = json.load(f)&#10;    examples = [example for example in os.listdir(max_package_dir + &quot;/examples&quot;) if example.endswith(&quot;.maxpat&quot;)]&#10;    package_json[&quot;filelist&quot;][&quot;examples&quot;] = examples&#10;&#10;with open(max_package_dir + &quot;/package-info.json&quot;, &quot;w&quot;) as f: &#10;    json.dump(package_json, f, ensure_ascii=False, indent=4)&#10;"
                shellToInvoke = "/usr/bin/python3">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "58F0ABFA242E3110004FE028"
+                     BuildableName = "max-ble.mxo"
+                     BlueprintName = "max-ble"
+                     ReferencedContainer = "container:maxmsp-ble/max-ble.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
             </ActionContent>
          </ExecutionAction>
       </PostActions>

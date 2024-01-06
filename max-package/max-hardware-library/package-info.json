@@ -1,32 +1,70 @@
 {
-  "name": "Max Hardware Library",
-  "version": "1.0.1",
-  "author": "Matthew Hamilton",
-  "description": "Library of utility objects for MaxMSP aimed at interacting with electronics hardware like Arduino via Bluetooth",
-  "tags": ["serial", "bytes", "arduino", "bluetooth", "ble"],
-  "website": "https://github.com/mhamilt/max-hardware-library",
-  "max_version_min": "8.0",
-  "max_version_max": "none",
-  "os": {
-    "macintosh": {
-      "min_version": "10.13.0",
-      "platform": ["arm64", "x64"]
+    "name": "Max Hardware Library",
+    "version": "1.0.1",
+    "author": "Matthew Hamilton",
+    "description": "Library of utility objects for MaxMSP aimed at interacting with electronics hardware like Arduino via Bluetooth",
+    "tags": [
+        "serial",
+        "bytes",
+        "arduino",
+        "bluetooth",
+        "ble"
+    ],
+    "website": "https://github.com/mhamilt/max-hardware-library",
+    "max_version_min": "8.0",
+    "max_version_max": "none",
+    "os": {
+        "macintosh": {
+            "min_version": "10.13.0",
+            "platform": [
+                "arm64",
+                "x64"
+            ]
+        },
+        "windows": {
+            "platform": [
+                "ia32",
+                "x64"
+            ],
+            "min_version": "none"
+        }
     },
-    "windows" : {
-     "platform" : [ "ia32", "x64" ],
-     "min_version" : "none"
- }
-  },
-  "homepatcher": "byte-cast-example.maxpat",
-  "package_extra": {
-    "reverse_domain": "com.mhamilt",
-    "copyright": "GNU General Public License v3.0"
-  },
-  "filelist": {
-    "examples": ["byte-cast-example.maxpat", "arduino-notify.maxpat", "filter-scan.maxpat", "rssi.maxpat", "simple-max-ble.maxpat", "subscribing.maxpat", "using-umenus.maxpat"],
-    "externals": ["byte-cast.mxo", "byte-cast.mxe", "byte-cast.mxe64", "max-ble.mxo", "max-ble.mxe", "max-ble.mxe64"],
-    "help": ["byte-cast.maxhelp", "max-ble.maxhelp"],
-    "extras": ["ble-notify/ble-notify.ino"],
-    "docs": ["byte-cast.maxref.xml", "max-ble.maxref.xml"]
-  }
+    "homepatcher": "byte-cast-example.maxpat",
+    "package_extra": {
+        "reverse_domain": "com.mhamilt",
+        "copyright": "GNU General Public License v3.0"
+    },
+    "filelist": {
+        "examples": [
+            "mhl.rssi.maxpat",
+            "mhl.connect-everything.maxpat",
+            "mhl.using-umenus.maxpat",
+            "mhl.filter-scan.maxpat",
+            "mhl.simple-max-ble.maxpat",
+            "mhl.subscribing.maxpat",
+            "mhl.byte-cast.maxpat",
+            "mhl.formats.maxpat",
+            "mhl.arduino-notify.maxpat",
+            "mhl.ble-midi.maxpat"
+        ],
+        "externals": [
+            "byte-cast.mxo",
+            "byte-cast.mxe",
+            "byte-cast.mxe64",
+            "max-ble.mxo",
+            "max-ble.mxe",
+            "max-ble.mxe64"
+        ],
+        "help": [
+            "byte-cast.maxhelp",
+            "max-ble.maxhelp"
+        ],
+        "extras": [
+            "ble-notify/ble-notify.ino"
+        ],
+        "docs": [
+            "byte-cast.maxref.xml",
+            "max-ble.maxref.xml"
+        ]
+    }
 }
