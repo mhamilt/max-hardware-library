@@ -29,7 +29,7 @@
             "min_version": "none"
         }
     },
-    "homepatcher": "byte-cast-example.maxpat",
+    "homepatcher": "byte-cast.maxpat",
     "package_extra": {
         "reverse_domain": "com.mhamilt",
         "copyright": "GNU General Public License v3.0"
