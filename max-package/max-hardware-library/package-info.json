@@ -10,7 +10,7 @@
   "os": {
     "macintosh": {
       "min_version": "10.13.0",
-      "platform": ["x64"]
+      "platform": ["arm64", "x64"]
     },
     "windows" : {
      "platform" : [ "ia32", "x64" ],
