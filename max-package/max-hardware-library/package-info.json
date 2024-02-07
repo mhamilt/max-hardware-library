@@ -1,6 +1,6 @@
 {
     "name": "Max Hardware Library",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "author": "Matthew Hamilton",
     "description": "Library of utility objects for MaxMSP aimed at interacting with electronics hardware like Arduino via Bluetooth",
     "tags": [
